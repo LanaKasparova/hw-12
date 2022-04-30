@@ -1,0 +1,326 @@
+body{
+    font-family: 'Open Sans', sans-serif;
+    font-size: 16px;
+    color: black;
+}
+.container{
+    max-width: 1280px;
+    padding: 0 15px;
+    margin: 0 auto;
+}
+a{
+    display: inline-block;
+}
+.row{
+    display: flex;
+}
+.col{
+    width: 50%;
+}
+.button{
+    border: 2px solid #ff3f40;
+    border-radius: 5px;
+    padding: 13px 53px;
+    font-weight: bold;
+    font-size: 18px;
+}
+header{
+    padding-top: 30px;
+    background-color: #f6f2f2;
+}
+header a{
+    font-weight: bold;
+    text-transform: uppercase;
+    color: white;
+    padding: 25px 30px;
+}
+header a:hover,
+header li.active{
+    background-color: #ff3f40;
+    transition: 0.3s;
+}
+header nav{
+    background-color: #313030;
+}
+header nav ul{
+    display: flex;
+    justify-content: center;
+}
+.about{
+    padding: 115px 0;
+    background-color: #f6f2f2;
+}
+.about .row{
+    gap: 110px;
+    align-items: center;
+}
+.about .about__title{
+    font-size: 60px;
+    font-weight: 800;
+    text-transform: uppercase;
+    line-height: 65px;
+    letter-spacing: 3px;
+    margin-bottom: 35px;
+}
+.about .about__details{
+    max-width: 515px;
+    margin-bottom: 60px;
+}
+.about__contact{
+    background-color: transparent;
+    color: #ff3f40;
+}
+.about__contact:hover{
+    transition: 0.3s;
+    background-color: #ff3f40;
+    color: white;
+}
+.video-wrapper iframe{
+    width: 100%;
+    border: 0;
+    box-shadow: 0 0 60px -1px black;
+}
+.services{
+    margin: 110px 0;
+    align-items: center;
+}
+.services .services__title{
+    text-transform: uppercase;
+    font-weight: bold;
+    text-align: left;
+    font-size: 42px;
+    margin-bottom: 50px;
+}
+.services .services__details{
+    max-width: 500px;
+    margin-bottom: 85px;
+}
+.services a.services__learn{
+    color: #ff3f40;
+}
+.services a.services__learn:hover{
+    transition: 0.3s;
+    background-color: #ff3f40;
+    color: white;
+}
+.services .services__list{
+    display: flex;
+    flex-wrap: wrap;
+}
+.services .services__item{
+    max-width: 50%;
+    padding: 0 50px 50px;
+}
+.services__item h3{
+    padding: 20px 0;
+}
+.services .services__end{
+    background-color: gray;
+}
+.products{
+    margin: 110px 0 140px 0;
+}
+.products .products__info{
+    margin: 0 0 90px 0;
+}
+.products .products__title{
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 42px;
+    text-align: center;
+    margin: 0 0 40px 0;
+}
+.products .products__details{
+    text-align: center;
+}
+.products .products__portfolio .products__nav{
+    display: flex;
+    justify-content: center;
+}
+.products__nav a{
+    font-weight: bold;
+    text-transform: uppercase;
+    color: #4c4c4c;
+    padding: 25px 30px;
+}
+.products__nav a:hover{
+    color: #ff3f40;
+    transition: 0.3s;
+}
+.portfolio__items{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+.products__portfolio-item{
+    width: 300px;
+    height: 300px;
+    background-color: #f5f0dd;
+}
+.our-team{
+    align-items: center;
+    margin: 0 0 110px 0;
+}
+.our-team .our-team__title{
+    display: block;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 42px;
+    margin: 0 0 40px 0;
+}
+.our-team .our-team__details{
+    text-align: left;
+    margin: 0 0 130px 0;
+}
+.our-team .our-team__one{
+    width: 320px;
+    height: 410px;
+    background-color: #f5f0dd;
+}
+.our-team__mates{
+    margin: 260px 0 0 0;
+}
+.our-team__mates .team-mates-name{
+    text-transform: uppercase;
+    font-weight: bold;
+    margin: 0 0 40px 0;
+}
+.socials{
+    margin: 40px 0 68px 0;
+}
+.socials li{
+    font-style: italic;
+    color: #4c4c4c;
+    display: inline;
+    padding: 0 10px;
+    justify-content: space-evenly;
+}
+.our-mates-gallery{
+    display: flex;
+}
+.gallery-item{
+    width: 190px;
+    height: 190px;
+    background-color: #f5f0dd;
+    margin: 5px;
+}
+.subscribe__banner{
+    background-color: #f5f0dd;
+    padding: 0 0 110px 0;
+    margin: 0 0 110px 0;
+}
+.subscribe__banner .subscribe__title{
+    color: white;
+    text-align: center;
+    text-transform: capitalize;
+    font-size: 42px;
+    padding: 145px 0 45px 0;
+}
+.subscribe__banner .subscribe__description{
+    text-align: center;
+    color: white;
+    margin: 0 0 65px 0;
+}
+.subscribe__button{
+    margin: 0 0 0 400px;
+}
+.subscribe__button .subscribe__field{
+    border: none;
+    border-radius: 5px;
+    width: 465px;
+    height: 70px;
+}
+.subscribe__button .subscribe__field[type=text]{
+    padding-left: 35px;
+}
+.subscribe__button .submit__button{
+    background-color: #ff3f40;
+    color: white;
+    text-transform: uppercase;
+    padding: 18px 35px;
+    margin-left: 20px;
+}
+.contact-us{
+    align-items: center;
+    margin-bottom: 110px;
+}
+.contact-us__info .contact-us__title{
+    display: block;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 42px;
+    margin: 0 0 40px 0;
+}
+.contact-us__info .contact-us__details{
+    text-align: left;
+    max-width: 700px;
+    margin: 0 0 75px 0;
+}
+.contact-us__form .name-field{
+    margin-right: 47px;
+}
+.contact-us__form .name-field, .mail-field{
+    padding: 15px 33px;
+    border: none;
+    border-radius: 5px;
+    background-color: #e5e5e5;
+    margin-bottom: 45px;
+    text-transform: capitalize;
+}
+.contact-us__form .name-field, .mail-field[type=text]{
+    padding-left: 35px;
+}
+.contact-us__form .message-field{
+    padding: 100px 180px;
+    border: none;
+    border-radius: 5px;
+    background-color: #e5e5e5;
+    resize: none;
+    margin-bottom: 45px;
+}
+.contact-us__form .send-button{
+    color: white;
+    text-transform: uppercase;
+    text-align: center;
+    font-weight: bold;
+    padding: 15px 215px;
+    background-color: #ff3f40;
+    border: none;
+    border-radius: 5px;
+}
+address{
+    margin: 270px 0 0 100px;
+    background-color: #2d2d2d;
+    color: white;
+    font-style: normal;
+    width: 575px;
+    height: 460px;
+    justify-content: center;
+}
+address .address__text{
+    padding: 144px 75px 75px 75px;
+}
+address .address__title{
+    text-transform: uppercase;
+    font-size: 18px;
+    margin-bottom: 45px;
+}
+address .address__details{
+    max-width: 290px;
+}
+footer .footer__content{
+    padding: 25px 30px;
+    background-color: #313030;
+    display: flex;
+    align-items: center;
+}
+footer .copyright__text{
+    color: white;
+    margin: 0 700px 0 100px;
+}
+footer img{
+    display: inline-block;
+    width: 30px;
+    align-items: center;
+    filter: invert(100%);
+}
