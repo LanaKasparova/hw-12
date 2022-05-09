@@ -11,6 +11,10 @@ body{
 a{
     display: inline-block;
 }
+.red-line{
+    border-bottom: 2px solid #ff3f40;
+    max-width: 130px;
+}
 .row{
     display: flex;
 }
@@ -67,13 +71,13 @@ header nav ul{
     margin-bottom: 60px;
 }
 .about__contact{
-    background-color: transparent;
-    color: #ff3f40;
+    background-color: #ff3f40;
+    color: white;
 }
 .about__contact:hover{
     transition: 0.3s;
-    background-color: #ff3f40;
-    color: white;
+    background-color: transparent;
+    color: #ff3f40;
 }
 .video-wrapper iframe{
     width: 100%;
@@ -82,7 +86,12 @@ header nav ul{
 }
 .services{
     margin: 110px 0;
-    align-items: center;
+}
+.services .container .row{
+    margin-bottom: 110px;
+}
+.services .container{
+    border-bottom: 1px solid #ececec;
 }
 .services .services__title{
     text-transform: uppercase;
@@ -103,25 +112,28 @@ header nav ul{
     background-color: #ff3f40;
     color: white;
 }
-.services .services__list{
+.services .services__list {
     display: flex;
     flex-wrap: wrap;
+    gap: 45px;
 }
-.services .services__item{
-    max-width: 50%;
-    padding: 0 50px 50px;
-}
-.services__item h3{
+.services .services__item h3{
     padding: 20px 0;
 }
-.services .services__end{
-    background-color: gray;
+.services .services__description{
+    max-width: 270px;
 }
 .products{
     margin: 110px 0 140px 0;
 }
 .products .products__info{
     margin: 0 0 90px 0;
+}
+.products .products__details{
+    margin-bottom: 30px;
+}
+.products .products__info .red-line{
+    margin: 0 auto;
 }
 .products .products__title{
     text-transform: uppercase;
@@ -136,12 +148,18 @@ header nav ul{
 .products .products__portfolio .products__nav{
     display: flex;
     justify-content: center;
+    gap: 60px;
+}
+.products .products__portfolio .products__nav li{
+    padding-bottom: 60px;
 }
 .products__nav a{
     font-weight: bold;
     text-transform: uppercase;
     color: #4c4c4c;
-    padding: 25px 30px;
+}
+.products__nav li .active{
+    color: #ff3f40;
 }
 .products__nav a:hover{
     color: #ff3f40;
@@ -158,55 +176,87 @@ header nav ul{
     background-color: #f5f0dd;
 }
 .our-team{
-    align-items: center;
-    margin: 0 0 110px 0;
+    margin-bottom: 110px;
+}
+.our-team .our-team__mates{
+    gap: 75px;
+}
+.our-team .our-team__more{
+    width: 100%;
+}
+.our-team .our-team__info,
+.our-team .our-team__socials{
+    margin-bottom: 65px;
 }
 .our-team .our-team__title{
-    display: block;
     text-transform: uppercase;
-    font-weight: bold;
     font-size: 42px;
-    margin: 0 0 40px 0;
+    margin-bottom: 45px;
 }
-.our-team .our-team__details{
-    text-align: left;
-    margin: 0 0 130px 0;
+.our-team .our-team__details,
+.our-team__description{
+    max-width: 450px;
+    color: #4c4c4c;
+    margin-bottom: 35px;
 }
-.our-team .our-team__one{
+.our-team .our-team__mates .our-team__avatar{
     width: 320px;
-    height: 410px;
+    height: 460px;
     background-color: #f5f0dd;
 }
-.our-team__mates{
-    margin: 260px 0 0 0;
-}
-.our-team__mates .team-mates-name{
-    text-transform: uppercase;
-    font-weight: bold;
-    margin: 0 0 40px 0;
-}
-.socials{
-    margin: 40px 0 68px 0;
-}
-.socials li{
-    font-style: italic;
-    color: #4c4c4c;
+.our-team .our-team__socials li{
     display: inline;
-    padding: 0 10px;
-    justify-content: space-evenly;
+    font-style: italic;
+    margin-right: 35px;
 }
-.our-mates-gallery{
+.our-team .our-team__socials a:hover{
+    color: #ff3f40;
+    transition: 0.3s;
+}
+.our-team .our-team__gallery{
     display: flex;
+    gap: 20px;
 }
-.gallery-item{
+.our-team .our-team__mates .our-team__gallery-item{
     width: 190px;
     height: 190px;
     background-color: #f5f0dd;
-    margin: 5px;
+}
+.our-team .our-team__mates .our-team__gallery-item .gallery__name {
+    display: none;
+    width: 100%;
+    height: 37px;
+    margin-top: 160px;
+    background-color: #7a786e;
+    text-align: center;
+}
+.our-team__gallery-item .gallery__name__active{
+    display: block;
+    width: 100%;
+    height: 37px;
+    margin-top: 160px;
+    background-color: #7a786e;
+    text-align: center;
+}
+.our-team__gallery-item .gallery__name p,
+.gallery__name__active p{
+    color: white;
+    font-size: 18px;
+    text-transform: uppercase;
+    padding: 8px 0 8px 0;
+}
+.our-team .our-team__mates .our-team__gallery-item:hover .gallery__name{
+  display: block;
+    transition: 0.3s;
+}
+.our-team__more .our-team__name{
+    text-transform: uppercase;
+    font-size: 30px;
+    margin-bottom: 30px;
 }
 .subscribe__banner{
     background-color: #f5f0dd;
-    padding: 0 0 110px 0;
+    padding: 145px 0 140px 0;
     margin: 0 0 110px 0;
 }
 .subscribe__banner .subscribe__title{
@@ -214,7 +264,7 @@ header nav ul{
     text-align: center;
     text-transform: capitalize;
     font-size: 42px;
-    padding: 145px 0 45px 0;
+    padding-bottom: 45px;
 }
 .subscribe__banner .subscribe__description{
     text-align: center;
@@ -222,7 +272,7 @@ header nav ul{
     margin: 0 0 65px 0;
 }
 .subscribe__button{
-    margin: 0 0 0 400px;
+    padding: 0 0 0 275px;
 }
 .subscribe__button .subscribe__field{
     border: none;
@@ -230,7 +280,7 @@ header nav ul{
     width: 465px;
     height: 70px;
 }
-.subscribe__button .subscribe__field[type=text]{
+.subscribe__button .subscribe__field[type=email]{
     padding-left: 35px;
 }
 .subscribe__button .submit__button{
@@ -240,9 +290,33 @@ header nav ul{
     padding: 18px 35px;
     margin-left: 20px;
 }
+.submit__button:hover{
+    transition: 0.3s;
+    background-color: transparent;
+    color: #ff3f40;
+}
 .contact-us{
-    align-items: center;
     margin-bottom: 110px;
+    overflow: hidden;
+}
+.contact-us__content{
+    position: relative;
+}
+.contact-us__content:after{
+    width: 100vw;
+    height: 100vw;
+    display: block;
+    content: '';
+    background-color: #2d2d2d;
+    position: absolute;
+    left: 1100px;
+}
+.contact-us__info{
+    display: block;
+    width: 100%;
+}
+.contact-us__content{
+    gap: 100px;
 }
 .contact-us__info .contact-us__title{
     display: block;
@@ -253,11 +327,14 @@ header nav ul{
 }
 .contact-us__info .contact-us__details{
     text-align: left;
-    max-width: 700px;
-    margin: 0 0 75px 0;
+    max-width: 720px;
+    margin: 0 0 55px 0;
+}
+.contact-us__info .red-line{
+    margin-bottom: 75px;
 }
 .contact-us__form .name-field{
-    margin-right: 47px;
+    margin-right: 50px;
 }
 .contact-us__form .name-field, .mail-field{
     padding: 15px 33px;
@@ -265,62 +342,76 @@ header nav ul{
     border-radius: 5px;
     background-color: #e5e5e5;
     margin-bottom: 45px;
+    font-size: 18px;
     text-transform: capitalize;
 }
-.contact-us__form .name-field, .mail-field[type=text]{
+.contact-us__form .name-field[type=text], .mail-field[type=email]{
     padding-left: 35px;
 }
 .contact-us__form .message-field{
-    padding: 100px 180px;
+    height: 240px;
+    width: 590px;
     border: none;
     border-radius: 5px;
     background-color: #e5e5e5;
     resize: none;
     margin-bottom: 45px;
+    padding: 37px 0 0 35px;
 }
 .contact-us__form .send-button{
     color: white;
     text-transform: uppercase;
     text-align: center;
     font-weight: bold;
-    padding: 15px 215px;
+    padding: 15px 238px;
     background-color: #ff3f40;
     border: none;
     border-radius: 5px;
 }
-address{
-    margin: 270px 0 0 100px;
+.contact-us__form .send-button:hover{
+      transition: 0.3s;
+      background-color: transparent;
+      color: #ff3f40;
+    border: 1px solid #ff3f40;
+  }
+.address__box{
     background-color: #2d2d2d;
     color: white;
     font-style: normal;
-    width: 575px;
-    height: 460px;
-    justify-content: center;
+    width: 100%;
+    height: 100%;
 }
-address .address__text{
+.address__box .address__text{
     padding: 144px 75px 75px 75px;
 }
-address .address__title{
+.address__box .address__title{
     text-transform: uppercase;
     font-size: 18px;
     margin-bottom: 45px;
 }
-address .address__details{
+.address__box .address__details{
     max-width: 290px;
 }
-footer .footer__content{
-    padding: 25px 30px;
+footer {
     background-color: #313030;
+}
+.footer__content{
+    padding: 55px 30px 25px;
+    background-color: #313030;
+    color: #b8b8b8;
     display: flex;
     align-items: center;
 }
-footer .copyright__text{
-    color: white;
-    margin: 0 700px 0 100px;
+.copyright{
+    margin-right: 650px;
 }
-footer img{
-    display: inline-block;
+footer .footer__socials li{
+    display: inline;
+}
+footer .footer__socials li:not(:last-child){
+    margin-right: 5px;
+}
+.footer__socials img{
     width: 30px;
-    align-items: center;
     filter: invert(100%);
 }
