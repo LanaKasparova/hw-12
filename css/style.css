@@ -216,7 +216,7 @@ header nav ul{
     gap: 20px;
 }
 .our-team .our-team__mates .our-team__gallery-item{
-    width: 190px;
+    width: 100%;
     height: 190px;
     background-color: #f5f0dd;
 }
@@ -344,7 +344,8 @@ header nav ul{
     font-size: 18px;
     text-transform: capitalize;
 }
-.contact-us__form .name-field[type=text], .mail-field[type=email]{
+.contact-us__form .name-field[type=text],
+.mail-field[type=email]{
     padding-left: 35px;
 }
 .contact-us__form .message-field{
@@ -417,111 +418,186 @@ footer .footer__socials li:not(:last-child){
     filter: invert(100%);
 }
 /* Adaptive versions */
-
-@media (max-width: 1280px) {
-    .container {
-        max-width: 1024px;
-    }
-    .about .row{
-        display: unset;
-    }
-    .about .about__info{
-        width: 100%;
-        margin-bottom: 50px;
-    }
-    .about .about__video{
-        margin: 0 auto;
-    }
-    .services .services__item{
-        width: 200px;
-    }
-    .services .services__title{
-        font-size: 30px;
-    }
-    .services .services__details {
-        max-width: 420px;
-    }
-    .portfolio__items {
-        gap: 40px;
-    }
-    .our-team .our-team__mates {
-        display: unset;
-        width: 100%;
-    }
-    .our-team .our-team__mates .our-team__avatar{
-        margin-bottom: 100px;
-    }
-    .our-team .our-team__more .our-team__gallery{
-        gap: 85px;
-    }
-    .subscribe .subscribe__button{
-        padding: 0 0 0 189px
-    }
-}
-
-@media (max-width: 986px){
+@media (max-width: 1024px){
     .container{
-        max-width: 768px;
+        max-width: 900px;
     }
-    .row{
-        display: unset;
-    }
-    p{
-        font-size: 14px;
-    }
-    .about .about__video{
-        width: 100%;
-    }
-    .about .about__contact {
-        width: 100%;
-        text-align: center;
-    }
-    .services .services__info{
-        margin-bottom: 70px;
-    }
-    .services .services__info .services__title{
+    .about .about__info .about__title{
         font-size: 40px;
     }
-    .services .services__list{
-        flex-wrap: unset;
+    .about .about__info .about__details{
+        max-width: 220px;
     }
-    .services .services__list,
-    .services__info, .services__learn{
-        width: 100%;
+    .about .about__video .video-wrapper iframe{
+        height: 50vh;
     }
-    .services .services__item{
-        max-width: 170px;
+    .services .services__title {
+        font-size: 30px;
     }
-    .services .services__learn{
-        text-align: center;
+    .services .services__details{
+        display: block;
+        max-width: 370px;
+    }
+    .services .services__list .services__description{
+        display: block;
+        max-width: 190px;
+    }
+    .products .portfolio__items{
+        justify-content: space-evenly;
     }
     .products__portfolio-item {
-        width: 153px;
-        height: 153px;
+        width: 200px;
+        height: 200px;
     }
-    .our-team .our-team__more .our-team__gallery{
-        gap: 20px;
-    }
-    .subscribe .subscribe__button {
-        padding: 0 0 0 58px;
-    }
-    .contact-us .contact-us__form{
+    .our-team .our-team__big-avatar{
         margin-bottom: 30px;
     }
-    .contact-us .col{
-        width: 100%;
+    .our-team .our-team__mates {
+        display: block;
     }
-    .contact-us__content:after{
-        display: none;
+    .subscribe__button {
+        padding: 0 0 0 120px;
     }
-    footer .row{
-        display: flex;
-    }
-    footer .footer__content{
-        padding: 30px;
-    }
-    footer .copyright{
-        margin-right: 200px;
+    footer .copyright {
+        margin-right: 295px;
     }
 }
 
+@media (max-width: 768px){
+    .container{
+        max-width: 700px;
+    }
+    header nav ul{
+        flex-direction: column;
+    }
+    .row{
+        display: block;
+    }
+    .col{
+        width: 100%;
+    }
+    .about .about__info,
+    .services .services__info,
+    .contact-us form{
+        margin-bottom: 50px;
+    }
+    .about .about__info .about__details,
+    .services .services__details{
+        max-width: 500px;
+    }
+    .about .about__info .about__contact,
+    .services a.services__learn{
+        width: 100%;
+        text-align: center;
+    }
+    .about .about__video{
+        width: 50%;
+        margin: 0 auto;
+    }
+    .services .services__list .services__description {
+        max-width: 440px;
+    }
+    .products .products__portfolio .products__nav {
+        gap: 35px;
+    }
+    .subscribe__button {
+        padding: 0 0 0 7px;
+    }
+}
+
+@media (max-width: 425px){
+    .container{
+        max-width: 400px;
+    }
+    .about .about__info .about__title,
+    .services .services__title{
+        text-align: center;
+    }
+    .about .about__video {
+        width: unset;
+    }
+    .products .products__portfolio .products__nav{
+        display: unset;
+        text-align: center;
+    }
+    .products .products__info {
+        margin: 0 0 20px 0
+    }
+    .our-team .our-team__more .our-team__socials{
+        display: block;
+        text-align: left;
+    }
+    .our-team .our-team__more .our-team__socials li{
+        margin-right: 20px;
+    }
+    .our-team .our-team__gallery {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .our-team .our-team__mates .our-team__gallery-item{
+        width: 50%;
+    }
+    .subscribe .subscribe__button{
+        padding: 0;
+    }
+    .subscribe__button .subscribe__field {
+        width: 100%;
+    }
+    .subscribe .submit__button {
+        width: 100%;
+        margin: 10px 0 0 0;
+        font-size: 14px;
+    }
+    footer .footer__content{
+        display: flex;
+        flex-wrap: wrap;
+    }
+    footer .copyright{
+        margin: 0 0 10px 0;
+    }
+    footer .copyright__text{
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 320px){
+    .container{
+        max-width: 250px;
+    }
+    .about .about__info .about__title,
+    .services .services__title,
+    .products .products__title,
+    .our-team .our-team__title,
+    .subscribe .subscribe__title{
+        font-size: 25px;
+    }
+    header nav li{
+        font-size: 12px;
+    }
+    p{
+        font-size: 12px;
+        text-align: justify;
+    }
+    .about .about__contact, .services .services__learn{
+        font-size: 14px;
+    }
+    .our-team .our-team__mates .our-team__avatar {
+        width: 100%;
+    }
+    .our-team .our-team__more .our-team__socials{
+        font-size: 12px;
+    }
+    .our-team .our-team__mates .our-team__gallery-item{
+        width: 100%;
+    }
+    .our-team__gallery-item .gallery__name__active p{
+        text-align: center;
+    }
+    .contact-us__form .name-field, .mail-field {
+        width: 100%;
+    }
+    .address__box .address__text {
+        padding: 100px 40px 76px 40px;
+    }
+}
