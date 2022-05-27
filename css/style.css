@@ -142,6 +142,8 @@ select {
 
 /**Main CSS**/
 
+/**Variables**/
+
 :root{
     --overall-width: 1280px;
     --horizontal-offset: 0 15px;
@@ -163,6 +165,8 @@ select {
     --margin-indent: 110px;
 
 }
+
+/**Styles**/
 
 body{
     font-family: var(--main-font);
@@ -247,6 +251,7 @@ header nav ul{
 }
 .video-wrapper iframe{
     width: 100%;
+    height: 315px;
     border: 0;
     box-shadow: 0 0 60px -1px black;
 }
@@ -584,6 +589,45 @@ footer .footer__socials li:not(:last-child){
     filter: invert(100%);
 }
 /* Adaptive versions */
+
+@media (max-width: 1280px){
+    .container{
+        max-width: 1024px;
+    }
+    .about .col,
+    .services .col{
+        width: 100%;
+    }
+    .about .about__info,
+    .services .services__info{
+        margin-bottom: 50px;
+    }
+    .about .row,
+    .services .row{
+        display: unset;
+    }
+    .about .about__video .video-wrapper iframe{
+        height: 100vh;
+    }
+    .services .services__list{
+        flex-wrap: unset;
+    }
+    .products .products__portfolio .portfolio__items{
+        justify-content: space-evenly;
+    }
+    .subscribe .subscribe__button {
+        padding: 0 0 0 165px;
+    }
+    .contact-us__form .name-field, .mail-field {
+        width: 100%;
+    }
+    .contact-us__content:after{
+        left: 990px;
+    }
+    footer .footer__content .copyright {
+        margin-right: 430px;
+    }
+}
 @media (max-width: 1024px){
     .container{
         max-width: 900px;
@@ -594,8 +638,8 @@ footer .footer__socials li:not(:last-child){
     .about .about__info .about__details{
         max-width: 220px;
     }
-    .about .about__video .video-wrapper iframe{
-        height: 50vh;
+    .about .about__video{
+        width: 100%;
     }
     .services .services__title {
         font-size: 30px;
@@ -633,8 +677,8 @@ footer .footer__socials li:not(:last-child){
     .container{
         max-width: 700px;
     }
-    header nav ul{
-        flex-direction: column;
+    header{
+        display: none;
     }
     .row{
         display: block;
@@ -657,11 +701,17 @@ footer .footer__socials li:not(:last-child){
         text-align: center;
     }
     .about .about__video{
-        width: 50%;
+        width: 100%;
         margin: 0 auto;
+    }
+    .services .services__list{
+        flex-wrap: wrap;
     }
     .services .services__list .services__description {
         max-width: 440px;
+    }
+    .subscribe .subscribe__button{
+        padding: 0;
     }
     .products .products__portfolio .products__nav {
         gap: 35px;
@@ -669,22 +719,53 @@ footer .footer__socials li:not(:last-child){
     .subscribe__button {
         padding: 0 0 0 7px;
     }
+    footer .footer__content{
+        display: flex;
+        flex-wrap: wrap;
+        gap: 50px;
+        justify-content: center;
+    }
+    footer .footer__content .copyright{
+        margin-right: 0;
+    }
 }
 
 @media (max-width: 425px){
     .container{
         max-width: 400px;
     }
+    .about {
+        padding: 60px 0;
+    }
+    .services, .products{
+        margin-top: 60px;
+    }
+    .subscribe__banner{
+        padding: 70px 0;
+    }
+    .services, .products,
+    .our-team, .subscribe__banner,
+    .contact-us{
+        margin-bottom: 60px;
+    }
+    a, p {
+        font-size: 12px;
+    }
     .about .about__info .about__title,
     .services .services__title{
         text-align: center;
     }
-    .about .about__video {
-        width: unset;
+    .about .about__video .video-wrapper iframe{
+        width: 100%;
+        height: 205px;
     }
     .products .products__portfolio .products__nav{
-        display: unset;
+        display: block;
         text-align: center;
+        padding-bottom: 20px;
+    }
+    .products .products__portfolio .portfolio__items{
+        gap: 30px;
     }
     .products .products__info {
         margin: 0 0 20px 0
@@ -703,6 +784,9 @@ footer .footer__socials li:not(:last-child){
     }
     .our-team .our-team__mates .our-team__gallery-item{
         width: 50%;
+    }
+    .subscribe .subscribe__title{
+        font-size: 30px;
     }
     .subscribe .subscribe__button{
         padding: 0;
