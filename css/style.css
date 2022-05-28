@@ -806,8 +806,8 @@ footer .footer__socials li:not(:last-child){
     .subscribe .subscribe__title{
         font-size: 25px;
     }
-    header nav li{
-        font-size: 12px;
+    header {
+        display: none;
     }
     p{
         font-size: 12px;
